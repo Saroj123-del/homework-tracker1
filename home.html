@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="maindiv">
+      <nav id="navbar">
+        <img src="logo.png" alt="" id="loginpage" />
+        <div id="navbartwo">
+          <h1 id="Add">+</h1>
+          <h1 id="name"></h1>
+          <i class="fas fa-user-circle icon" id="Icon"></i>
+          <i class="fas fa-bars icon" id="ham"></i>
+        </div>
+      </nav>
+
+      <div id="mainform">
+        <div id="sidebarr">
+          <h3 onclick="filterTasks('all');" class="but" id="alll">
+            <img src="home-5-512.png" alt="" class="images" />
+            <span style="margin-top: 7px; color: white">All</span>
+          </h3>
+          <h3
+            onclick="filterTasks('inProgress')"
+            class="but"
+            style="display: flex"
+          >
+            <img src="gear-512.png" alt="" class="images" />
+            <span style="margin-top: 7px; color: white">In Progress</span>
+          </h3>
+          <h3
+            onclick="filterTasks('notStarted')"
+            class="but"
+            style="display: flex"
+          >
+            <img src="info-3-512.png" alt="" class="images" />
+            <span style="margin-top: 7px; color: white"> Not Started</span>
+          </h3>
+          <h3
+            onclick="filterTasks('completed')"
+            class="but"
+            style="display: flex"
+          >
+            <img src="ok-512.png" alt="" class="images" />
+            <span style="margin-top: 7px; color: white">Completed</span>
+          </h3>
+          <h3 id="cancol">
+            <img src="cancel-512.png" alt="" class="images" />
+            <span> Close</span>
+          </h3>
+        </div>
+        <div id="middle">
+          <div id="result"></div>
+
+          <div id="formContainer">
+            <form id="from">
+              <h1 id="mainhw">Edit/Add Homework</h1>
+              <label for="fname" class="tt">Title</label>
+              <input
+                type="text"
+                id="title"
+                name="firstname"
+                placeholder="Enter Homework Title"
+                autocomplete="off"
+              />
+
+              <label for="subject" class="tt">Description</label>
+              <textarea
+                id="description"
+                name="subject"
+                placeholder="Enter Homework Description"
+              ></textarea>
+              <label for="country" class="tt">Status</label>
+              <select id="selected" name="country">
+                <option value="In Progress">In Progress</option>
+                <option value="Not Started">Not Started</option>
+                <option value="Completed">Completed</option>
+              </select>
+
+              <input
+                type="submit"
+                value="Submit"
+                id="submitbtn"
+                style="font-family: 'Roboto', sans-serif"
+              />
+              <input
+                type="submit"
+                value="Cancel"
+                id="cancelbtn"
+                style="margin-top: 10px; font-family: 'Roboto', sans-serif"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>
